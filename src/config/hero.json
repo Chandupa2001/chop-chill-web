@@ -1,0 +1,12 @@
+{
+  "source": "hero-new-2.jpeg",
+  "width": 1536,
+  "height": 1024,
+  "landscape": [
+    {
+      "src": "/images/hero/hero-1536.webp",
+      "w": 1536
+    }
+  ],
+  "mobile": "/images/hero/hero-mobile.webp"
+}

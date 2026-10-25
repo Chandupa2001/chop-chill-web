@@ -1,0 +1,108 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(245, 239, 228, 0.88);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: var(--header-h);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.emblem {
+  width: 46px;
+  height: 46px;
+  transition: transform 0.4s var(--ease);
+}
+
+.logo:hover .emblem {
+  transform: rotate(-8deg);
+}
+
+.wordmark {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.amp {
+  color: var(--amber);
+}
+
+.nav {
+  display: none;
+  gap: 4px;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    border-color 0.2s var(--ease),
+    background-color 0.2s var(--ease);
+}
+
+.navLink:hover {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+
+/* "Call" pill with a filled chili circle, the header's one loud element */
+.call {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 4px 4px 4px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.2s var(--ease);
+}
+
+.call:hover {
+  border-color: var(--chili);
+}
+
+.callIcon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--chili);
+  color: #fff;
+  transition: transform 0.3s var(--ease);
+}
+
+.call:hover .callIcon {
+  transform: rotate(-12deg) scale(1.05);
+}
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+}

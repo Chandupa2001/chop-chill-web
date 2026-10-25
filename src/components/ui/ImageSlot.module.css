@@ -1,0 +1,63 @@
+.slot {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Warm placeholder art: soft "plate light" over food-toned gradients */
+.slot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(42% 34% at 58% 52%, rgba(255, 196, 120, 0.28), transparent 70%),
+    radial-gradient(80% 60% at 20% 10%, rgba(255, 255, 255, 0.08), transparent 60%);
+}
+
+.tone0 {
+  background: radial-gradient(120% 90% at 70% 30%, #8c3a1e 0%, #4b1d16 48%, #1c1310 100%);
+}
+
+.tone1 {
+  background: radial-gradient(120% 90% at 30% 30%, #c27a2c 0%, #7a3a1a 50%, #2a1712 100%);
+}
+
+.tone2 {
+  background: radial-gradient(120% 90% at 60% 40%, #6b2425 0%, #3c1517 52%, #170e0d 100%);
+}
+
+.tone3 {
+  background: radial-gradient(120% 90% at 40% 30%, #a65a2a 0%, #5d2a18 50%, #1e1410 100%);
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px dashed rgba(251, 248, 242, 0.35);
+  border-radius: 999px;
+  color: rgba(251, 248, 242, 0.7);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease);
+}
+
+.slot img.loaded {
+  opacity: 1;
+}

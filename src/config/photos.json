@@ -1,0 +1,100 @@
+{
+  "mix-kottu.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/mix-kottu-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/mix-kottu-1200.webp",
+        "w": 1200
+      }
+    ],
+    "width": 1200,
+    "height": 1607
+  },
+  "cheese-kottu-chicken.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/cheese-kottu-chicken-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/cheese-kottu-chicken-1200.webp",
+        "w": 1200
+      }
+    ],
+    "width": 1200,
+    "height": 1607
+  },
+  "devilled-chicken.png": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/devilled-chicken-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/devilled-chicken-1084.webp",
+        "w": 1084
+      }
+    ],
+    "width": 1084,
+    "height": 1451
+  },
+  "hot-butter-cuttlefish.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/hot-butter-cuttlefish-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/hot-butter-cuttlefish-1194.webp",
+        "w": 1194
+      }
+    ],
+    "width": 1194,
+    "height": 1600
+  },
+  "nasi-goreng.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/nasi-goreng-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/nasi-goreng-1200.webp",
+        "w": 1200
+      }
+    ],
+    "width": 1200,
+    "height": 1607
+  },
+  "meat-platter.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/dishes/meat-platter-640.webp",
+        "w": 640
+      },
+      {
+        "src": "/images/dishes/meat-platter-1200.webp",
+        "w": 1200
+      }
+    ],
+    "width": 1200,
+    "height": 1607
+  },
+  "space.jpeg": {
+    "srcSet": [
+      {
+        "src": "/images/space/space-800.webp",
+        "w": 800
+      },
+      {
+        "src": "/images/space/space-1600.webp",
+        "w": 1600
+      }
+    ],
+    "width": 1600,
+    "height": 1195
+  }
+}

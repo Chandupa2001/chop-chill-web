@@ -1,0 +1,36 @@
+.band {
+  background: var(--oxblood);
+  color: var(--paper);
+}
+
+.inner {
+  display: grid;
+  justify-items: center;
+  gap: clamp(24px, 3vw, 36px);
+  padding-block: clamp(80px, 11vw, 150px);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(64px, 11vw, 168px);
+  line-height: 0.86;
+  text-wrap: balance;
+}
+
+.title :global(.serif) {
+  display: block;
+  font-size: 0.62em;
+  line-height: 1;
+}
+
+.buttons {
+  justify-content: center;
+}
+
+@media (max-width: 599px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+  }
+}

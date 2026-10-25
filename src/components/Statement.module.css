@@ -1,0 +1,68 @@
+.statement {
+  display: grid;
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.stamp {
+  --stamp-size: 116px;
+  margin-top: -8px;
+}
+
+@media (min-width: 900px) {
+  .top {
+    /* The stamp overlaps the statement lines on the right */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -96px;
+  }
+
+  .stamp {
+    --stamp-size: 188px;
+    margin-right: 4%;
+  }
+}
+
+.lines {
+  display: grid;
+  font-size: clamp(40px, 7.2vw, 104px);
+  font-weight: 500;
+  font-stretch: 85%;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.line {
+  display: block;
+  color: var(--faded);
+}
+
+.line:first-child {
+  color: var(--ink);
+}
+
+.line :global(.serif) {
+  font-size: 1.08em;
+  letter-spacing: -0.02em;
+}
+
+.about {
+  justify-self: end;
+  max-width: 40ch;
+}
+
+@media (min-width: 900px) {
+  .lines {
+    padding-left: 12%;
+  }
+
+  .about {
+    margin-right: 6%;
+  }
+}

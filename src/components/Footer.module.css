@@ -1,0 +1,98 @@
+.footer {
+  overflow: hidden;
+  padding-top: clamp(56px, 8vw, 96px);
+  background: var(--charcoal);
+  color: var(--paper);
+  container-type: inline-size;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px 32px;
+}
+
+.logo {
+  width: 168px;
+  height: auto;
+  margin: -14px 0 6px -14px; /* the logo artwork has its own dark padding */
+  mix-blend-mode: lighten; /* melts the artwork's dark background into the footer */
+}
+
+.text {
+  max-width: 26ch;
+  font-style: normal;
+  color: rgba(251, 248, 242, 0.72);
+}
+
+.heading {
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(251, 248, 242, 0.6);
+}
+
+.links {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-block;
+  padding: 3px 0;
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.links a:hover {
+  color: #f08a6a;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  max-width: 230px;
+  padding: 0;
+  color: rgba(251, 248, 242, 0.85);
+  font-variant-numeric: tabular-nums;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-top: 20px;
+  border-top: 1px solid var(--line-light);
+  font-size: 14px;
+  color: rgba(251, 248, 242, 0.6);
+}
+
+/* Giant wordmark cropped by the bottom edge */
+.wordmark {
+  margin: clamp(24px, 4vw, 48px) 0 0;
+  font-size: 19.6cqi;
+  line-height: 0.8;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--paper);
+  margin-bottom: -0.12em;
+}
+
+.wordmark span {
+  color: var(--amber);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    /* Room for the sticky action bar */
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+}

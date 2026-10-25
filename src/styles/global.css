@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+@media (max-width: 767px) {
+  html {
+    /* Keep focused / scrolled-to elements clear of the sticky action bar */
+    scroll-padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-stretch: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--chili);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Layout ─────────────────────────────────────────────────────────────── */
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+/* ── Type voices ────────────────────────────────────────────────────────── */
+
+/* Condensed black uppercase: headlines and the wordmark */
+.display {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-stretch: 62%;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+}
+
+/* Italic serif accent words inside display lines */
+.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: 100%;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.display .serif {
+  font-size: 1.04em;
+  line-height: 0.8;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chili);
+}
+
+.h2 {
+  font-size: clamp(44px, 7.4vw, 108px);
+}
+
+.lede {
+  font-size: clamp(17px, 1.5vw, 19px);
+  color: var(--ink-2);
+  max-width: 46ch;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    transform 0.2s var(--ease);
+}
+
+.btn svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--lg {
+  min-height: 60px;
+  padding: 0 28px;
+  font-size: 18px;
+}
+
+.btn--call {
+  background: var(--chili);
+  color: #fff;
+}
+
+.btn--call:hover {
+  background: var(--chili-deep);
+}
+
+.btn--ghost {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn--light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn--light:hover {
+  background: #fff;
+}
+
+.btn--ghost-light {
+  border-color: var(--line-light);
+  color: var(--paper);
+}
+
+.btn--ghost-light:hover {
+  border-color: var(--paper);
+  background: rgba(251, 248, 242, 0.08);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Round icon-only button */
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    background-color 0.2s var(--ease),
+    color 0.2s var(--ease);
+}
+
+.icon-btn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Chips & stickers ───────────────────────────────────────────────────── */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.chip--hot {
+  background: var(--chili);
+  color: #fff;
+}
+
+.sticker {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--oxblood);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 6px 18px rgba(20, 12, 8, 0.18);
+  rotate: -4deg;
+}
+
+.sticker--hot {
+  background: var(--chili);
+  color: #fff;
+  rotate: -2deg;
+}
+
+.sticker--dark {
+  background: var(--oxblood);
+  color: var(--paper);
+  rotate: 3deg;
+}
+
+/* ── Scroll reveal ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s var(--ease),
+      transform 0.8s var(--ease);
+    transition-delay: calc(var(--i, 0) * 90ms);
+  }
+
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,45 @@
+.reviews {
+  display: grid;
+  justify-items: start;
+  gap: 22px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin: 24px 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px;
+  border-radius: var(--r-lg);
+  background: var(--paper);
+}
+
+.quote {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.who {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.who span {
+  font-weight: 400;
+  color: var(--muted);
+}

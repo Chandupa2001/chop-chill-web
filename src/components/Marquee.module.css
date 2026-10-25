@@ -1,0 +1,45 @@
+.marquee {
+  margin-top: clamp(40px, 6vw, 72px);
+  padding-block: 18px;
+  border-block: 1px solid var(--line);
+  overflow: hidden;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 48s linear infinite;
+}
+
+.row {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row li {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.star {
+  margin-inline: 0.5em;
+  color: var(--chili);
+  font-size: 0.7em;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

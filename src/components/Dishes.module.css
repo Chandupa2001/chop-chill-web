@@ -1,0 +1,260 @@
+.dishes {
+  padding-bottom: var(--section);
+}
+
+.head {
+  display: grid;
+  gap: 18px;
+  margin-bottom: clamp(32px, 5vw, 64px);
+}
+
+.split {
+  display: grid;
+  gap: 32px;
+}
+
+/* ── Featured dish ──────────────────────────────────────────────────────── */
+
+.feature {
+  position: relative;
+  margin: 0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  color: var(--paper);
+}
+
+.featureImg {
+  position: absolute;
+  inset: 0;
+}
+
+.feature::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, rgba(18, 12, 9, 0.78) 100%);
+  pointer-events: none;
+}
+
+.chips {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 16px;
+  padding: clamp(18px, 3vw, 32px);
+}
+
+.capName {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.capPrice {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.capDesc {
+  grid-column: 1 / -1;
+  max-width: 44ch;
+  font-size: 15px;
+  color: rgba(251, 248, 242, 0.82);
+}
+
+/* ── Side column ────────────────────────────────────────────────────────── */
+
+.side {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 28px;
+}
+
+.stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.statNum {
+  font-size: clamp(112px, 15vw, 220px);
+  font-weight: 200;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+}
+
+.statLabel {
+  padding-top: 0.4em;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+
+.sideText {
+  max-width: 34ch;
+  font-size: 18px;
+  color: var(--ink-2);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 340px;
+}
+
+.arrows {
+  display: flex;
+  gap: 4px;
+}
+
+.counter {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1.5fr 1fr;
+    gap: clamp(40px, 5vw, 80px);
+  }
+
+  .feature {
+    aspect-ratio: 5 / 4;
+  }
+
+  .side {
+    padding-top: 24px;
+    gap: 34px;
+  }
+
+  .chips {
+    top: clamp(18px, 3vw, 32px);
+    left: clamp(18px, 3vw, 32px);
+    right: 30%;
+  }
+}
+
+/* ── Rail of all dishes ─────────────────────────────────────────────────── */
+
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(240px, 26vw, 320px);
+  gap: 16px;
+  margin: clamp(48px, 7vw, 88px) calc(-1 * var(--gutter)) 0;
+  padding: 0 var(--gutter) 12px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.card {
+  scroll-snap-align: start;
+}
+
+.cardImg {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-lg);
+}
+
+.cardMeta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.cardName {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cardPrice {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.cardDesc {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.cardCta {
+  display: flex;
+}
+
+.ctaLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  padding: 26px;
+  border-radius: var(--r-lg);
+  background: var(--chili);
+  color: #fff;
+  font-size: 64px;
+  text-decoration: none;
+  transition: background-color 0.2s var(--ease);
+}
+
+.ctaLink:hover {
+  background: var(--chili-deep);
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ctaIcon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--chili);
+  transition: transform 0.35s var(--ease);
+}
+
+.ctaLink:hover .ctaIcon {
+  transform: rotate(45deg);
+}

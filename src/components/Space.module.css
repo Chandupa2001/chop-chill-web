@@ -1,0 +1,157 @@
+.space {
+  padding-block: var(--section);
+  background: var(--paper);
+  /* Nav jumps skip most of the top padding, landing just below the header */
+  scroll-margin-top: calc(16px - var(--section));
+}
+
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+.copy {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+}
+
+/* ── BYOB feature card ──────────────────────────────────────────────────── */
+
+.byob {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 6px;
+  padding: clamp(22px, 2.6vw, 30px);
+  border-radius: var(--r-lg);
+  background: var(--oxblood);
+  color: var(--paper);
+  box-shadow: 0 18px 40px rgba(107, 36, 37, 0.22);
+}
+
+.byobIcon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--charcoal);
+}
+
+.byobTag {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f2b27a;
+}
+
+.byobTitle {
+  margin-top: 8px;
+  font-size: clamp(34px, 3.6vw, 50px);
+}
+
+.byobText {
+  margin-top: 12px;
+  max-width: 38ch;
+  font-size: 16px;
+  color: rgba(251, 248, 242, 0.86);
+}
+
+.photoWrap {
+  position: relative;
+}
+
+.photo {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--r-xl);
+}
+
+/* Rotating BYOB stamp overlapping the photo's corner */
+.stamp {
+  --stamp-size: 116px;
+  position: absolute;
+  top: -40px;
+  right: 10px;
+}
+
+.stampMark {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--chili);
+  color: #fff;
+  font-size: calc(var(--stamp-size) * 0.17);
+  line-height: 1;
+}
+
+.stats {
+  display: grid;
+  margin-top: clamp(56px, 8vw, 104px);
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.stat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.num {
+  font-size: clamp(88px, 10vw, 150px);
+  font-weight: 200;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+}
+
+.label {
+  max-width: 13ch;
+  padding-top: 6px;
+  font-size: 15px;
+  line-height: 1.35;
+  text-align: right;
+  color: var(--ink-2);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: end;
+    gap: clamp(40px, 6vw, 96px);
+  }
+
+  .copy {
+    padding-bottom: 12px;
+  }
+
+  .stamp {
+    --stamp-size: 156px;
+    top: -56px;
+    right: auto;
+    left: -64px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat {
+    padding: 36px 32px 36px 0;
+    border-bottom: 0;
+  }
+
+  .stat + .stat {
+    padding-left: 32px;
+    border-left: 1px solid var(--line);
+  }
+}

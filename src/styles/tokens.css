@@ -1,0 +1,34 @@
+:root {
+  /* Colour */
+  --cream: #f5efe4;
+  --paper: #fbf8f2;
+  --sand: #ebe2d3;
+  --ink: #1b1714;
+  --ink-2: #4a423c;
+  --muted: #6e655d; /* ≥4.5:1 on cream for small text */
+  --faded: #8f847a; /* large text only */
+  --line: rgba(27, 23, 20, 0.16);
+  --line-light: rgba(251, 248, 242, 0.28);
+  --chili: #d2401c; /* reserved for Call actions + accents */
+  --chili-deep: #b5340f;
+  --amber: #d9782a; /* the logo's ring and "&" */
+  --oxblood: #6b2425;
+  --charcoal: #171719; /* the logo's background */
+  --leaf: #2f6b3b;
+
+  /* Type */
+  --font-sans: 'Archivo Variable', 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  /* Shape & space */
+  --r-xl: 28px;
+  --r-lg: 22px;
+  --r-md: 16px;
+  --gutter: clamp(16px, 3.2vw, 40px);
+  --max: 1360px;
+  --section: clamp(72px, 11vw, 150px);
+  --header-h: 72px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

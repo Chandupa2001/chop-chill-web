@@ -1,0 +1,28 @@
+{
+  "name": "chop-and-chill",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "test": "node node_modules/vitest/vitest.mjs run",
+    "brand": "node scripts/brand-assets.mjs",
+    "hero": "node scripts/hero-image.mjs",
+    "photos": "node scripts/photo-images.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource/instrument-serif": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.5",
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "vitest": "^5.0.5"
+  }
+}
