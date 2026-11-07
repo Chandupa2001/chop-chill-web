@@ -37,13 +37,13 @@ export const site = {
   // Index 0 = Sunday … 6 = Saturday. Use null for a closed day.
   // A closing time earlier than the opening time means "after midnight".
   hours: [
-    { open: '11:00', close: '22:30' }, // Sunday     PLACEHOLDER
-    { open: '11:00', close: '22:00' }, // Monday     PLACEHOLDER
-    { open: '11:00', close: '22:00' }, // Tuesday    PLACEHOLDER
-    { open: '11:00', close: '22:00' }, // Wednesday  PLACEHOLDER
-    { open: '11:00', close: '22:00' }, // Thursday   PLACEHOLDER
-    { open: '11:00', close: '23:00' }, // Friday     PLACEHOLDER
-    { open: '11:00', close: '23:00' }, // Saturday   PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Sunday     PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Monday     PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Tuesday    PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Wednesday  PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Thursday   PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Friday     PLACEHOLDER
+    { open: '12:00', close: '23:30' }, // Saturday   PLACEHOLDER
   ],
 
   social: {
